@@ -14,11 +14,11 @@ before_install:
 script:
   - mvn verify
   - |
-    mvn clean install sonar:sonar \
-    -Dsonar.projectKey=<SONAR_PROJECT_KEY> \
-    -Dsonar.organization=<SONAR_ORGANISATION_KEY> \
+    mvn sonar:sonar \
+    -Dsonar.projectKey=Vertrieb_sample-application-students \
+    -Dsonar.organization=vertrieb-github \
     -Dsonar.host.url=https://sonarcloud.io \
-    -Dsonar.login=$SONAR_TOKEN
+    -Dsonar.login=14a501ab408e7dd56f9b62266834fdcd528dd2be
 
 # Cache the .m2 folder to prevent redownloading dependencies on each build
 cache:
