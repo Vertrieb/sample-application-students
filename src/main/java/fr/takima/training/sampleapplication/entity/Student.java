@@ -9,7 +9,7 @@ import javax.validation.constraints.Size;
 public class Student {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private Long id
+    private Long id;
 
     @Size(max = 20)
     @Column(name = "first_name")
